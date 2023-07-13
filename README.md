@@ -6,6 +6,9 @@
 
 PoliticalPreparedness is an example application built to demonstrate core Android Development skills as presented in the Udacity Android Developers Kotlin curriculum.
 
+## The final look of the app
+<img src="https://github.com/dononcharles/politicalpreparedness/blob/master/gif/test.gif" width="250" height="450">
+
 This app demonstrates the following views and techniques:
 
 * [Retrofit](https://square.github.io/retrofit/) to make api calls to an HTTP web service.
