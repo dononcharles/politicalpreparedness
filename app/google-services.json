@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "401655889713",
+    "project_id": "locationreminder-9161a",
+    "storage_bucket": "locationreminder-9161a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401655889713:android:a76f5215f79bd879bfba10",
+        "android_client_info": {
+          "package_name": "com.udacity.politicalpreparedness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401655889713-lvb2knql5kjl4lnp0l1gghdgd6294fno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt1DoAwnHgWswPLjsNVMLOTyw-S0Pqfxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401655889713-lvb2knql5kjl4lnp0l1gghdgd6294fno.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

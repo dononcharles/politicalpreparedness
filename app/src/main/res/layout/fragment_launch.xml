@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.udacity.politicalpreparedness.ui.MainActivity">
+
+        <!-- Add image for home screen logo. -->
+        <ImageView
+            android:id="@+id/ballotLogoImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ballot_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--  Add Button to navigate to upcoming elections. -->
+        <Button
+            android:id="@+id/upcomingElectionsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/up_coming_elections"
+            app:layout_constraintBottom_toTopOf="@+id/findRepresentativesButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/launchUiButtonStyle" />
+
+        <!-- Add Button to navigate to representatives. -->
+        <Button
+            android:id="@+id/findRepresentativesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/find_my_representatives"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/launchUiButtonStyle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

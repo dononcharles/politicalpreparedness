@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Political Preparedness</string>
+
+    <string name="up_coming_elections">Upcoming Elections</string>
+    <string name="representatives">Representatives</string>
+    <string name="find_my_representatives">Find My Representatives</string>
+    <string name="find_my_elections">Find My Elections</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="elections">Elections</string>
+    <string name="upcoming_elections">Upcoming Elections</string>
+    <string name="upcoming_saved_elections">Upcoming / Saved Elections</string>
+    <string name="saved_elections">Saved Elections</string>
+    <string name="error_message">An error occurred when loading elections</string>
+    <string name="voter_remove_from_saved">Unfollow Election</string>
+    <string name="voter_add_to_saved">Follow Election</string>
+    <string name="connection_issue">Connection Issue</string>
+    <string name="representative_search">Representative Search</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="city">City</string>
+    <string name="zip">Zip</string>
+    <string name="error_missing_first_line_address">Enter first line address</string>
+    <string name="error_missing_city">Enter city</string>
+    <string name="error_missing_state">State field is required</string>
+    <string name="error_missing_zip">Enter zip code</string>
+    <string name="representative_from">%s from %s</string>
+    <string name="representative_fb">%s facebook page</string>
+    <string name="representative_twitter">%s twitted</string>
+    <string name="representative_www">%s web page</string>
+    <string name="use_my_location">Use my location</string>
+    <string name="my_representatives">My Representatives</string>
+    <string name="photo_profile">Photo profile</string>
+    <string name="location_required_error">Location services must be enabled to use the app</string>
+    <string name="permission_denied_explanation">You need to grant location permission in order to select the location.</string>
+    <string name="settings">Settings</string>
+    <string name="error_missing_location">Your location is missing</string>
+    <string name="election_information">Election Information</string>
+    <string name="address">Address</string>
+    <string name="voting_location">&lt;a href="%s">Voting locations&lt;/a></string>
+    <string name="ballot_information">&lt;a href="%s">Ballot information&lt;/a></string>
+    <string name="error_occurred_while_loading_voter_info">Error occurred while loading voter address</string>
+</resources>

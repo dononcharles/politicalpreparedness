@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="representative"
+            type="com.udacity.politicalpreparedness.ui.representative.model.Representative" />
+
+        <variable
+            name="clickListener"
+            type="com.udacity.politicalpreparedness.ui.representative.adapter.RepresentativeListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/half_grid_unit"
+        app:cardElevation="@dimen/half_grid_unit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@{@string/representative_from(representative.official.name, representative.office.name)}"
+            android:onClick="@{()->clickListener.onClick(representative)}">
+
+
+            <ImageView
+                android:id="@+id/representativePhoto"
+                profileImage="@{representative.official.photoUrl}"
+                android:layout_width="@dimen/eight_grid_unit"
+                android:layout_height="@dimen/eight_grid_unit"
+                android:layout_margin="@dimen/two_grid_unit"
+                android:contentDescription="@string/photo_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ballot_logo" />
+
+            <TextView
+                android:id="@+id/representativeTitle"
+                style="@style/HeaderTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/one_grid_unit"
+                android:layout_marginTop="@dimen/one_grid_unit"
+                android:layout_marginEnd="@dimen/one_grid_unit"
+                android:maxLines="1"
+                android:text="@{representative.office.name}"
+                android:textColor="?colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/representativePhoto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginEnd="@dimen/two_grid_unit"
+                tools:text='@tools:sample/lorem[19]' />
+
+            <TextView
+                android:id="@+id/representativeName"
+                style="@style/DefaultTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/one_grid_unit"
+                android:maxLines="1"
+                android:text="@{representative.official.name}"
+                app:layout_constraintEnd_toStartOf="@+id/facebook_icon"
+                app:layout_constraintStart_toStartOf="@+id/representativeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/representativeTitle"
+                app:layout_goneMarginEnd="@dimen/two_grid_unit"
+                tools:text='@tools:sample/lorem[19]' />
+
+            <TextView
+                android:id="@+id/representativeType"
+                style="@style/DefaultTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/one_grid_unit"
+                android:layout_marginBottom="@dimen/one_grid_unit"
+                android:maxLines="1"
+                android:text="@{representative.official.party}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/facebook_icon"
+                app:layout_constraintStart_toStartOf="@+id/representativeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/representativeName"
+                app:layout_goneMarginEnd="@dimen/two_grid_unit"
+                tools:text='@tools:sample/lorem[19]' />
+
+            <ImageView
+                android:id="@+id/facebook_icon"
+                android:layout_width="@dimen/six_grid_unit"
+                android:layout_height="@dimen/six_grid_unit"
+                android:layout_marginBottom="@dimen/one_grid_unit"
+                android:contentDescription="@{@string/representative_fb(representative.official.name)}"
+                android:foreground="?selectableItemBackground"
+                android:padding="@dimen/one_grid_unit"
+                android:src="@drawable/ic_facebook"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/twitter_icon"
+                app:layout_constraintTop_toBottomOf="@+id/representativeTitle"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/twitter_icon"
+                android:layout_width="@dimen/six_grid_unit"
+                android:layout_height="@dimen/six_grid_unit"
+                android:layout_marginBottom="@dimen/one_grid_unit"
+                android:contentDescription="@{@string/representative_twitter(representative.official.name)}"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/one_grid_unit"
+                android:src="@drawable/ic_twitter"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/www_icon"
+                app:layout_constraintTop_toBottomOf="@+id/representativeTitle"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/www_icon"
+                android:layout_width="@dimen/six_grid_unit"
+                android:layout_height="@dimen/six_grid_unit"
+                android:layout_marginEnd="@dimen/two_grid_unit"
+                android:layout_marginBottom="@dimen/one_grid_unit"
+                android:contentDescription="@{@string/representative_www(representative.official.name)}"
+                android:foreground="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/one_grid_unit"
+                android:src="@drawable/ic_www"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/representativeTitle"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="java.text.DateFormat" />
+
+        <variable
+            name="election"
+            type="com.udacity.politicalpreparedness.ui.election.adapter.ElectionModel" />
+
+        <variable
+            name="clickListener"
+            type="com.udacity.politicalpreparedness.ui.election.adapter.ElectionListener" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blueLight"
+        android:layout_margin="@dimen/half_grid_unit"
+        android:contentDescription="@{election.name}"
+        android:onClick="@{() -> clickListener.onClick(election)}"
+        app:cardCornerRadius="@dimen/half_grid_unit"
+        app:cardElevation="@dimen/quarter_grid_unit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/election_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/one_grid_unit"
+                android:text="@{election.name}"
+                android:textSize="@dimen/text_size_big"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem[2]" />
+
+            <TextView
+                android:id="@+id/election_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/one_grid_unit"
+                android:text="@{DateFormat.getDateInstance(DateFormat.MEDIUM).format(election.electionDay)}"
+                android:textSize="@dimen/text_size_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/election_name"
+                tools:text="@tools:sample/lorem[2]" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

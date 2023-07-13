@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quarter_grid_unit">2dp</dimen>
+    <dimen name="half_grid_unit">4dp</dimen>
+    <dimen name="one_grid_unit">8dp</dimen>
+    <dimen name="half_one_grid_unit">10dp</dimen>
+    <dimen name="two_grid_unit">16dp</dimen>
+    <dimen name="three_grid_unit">24dp</dimen>
+    <dimen name="four_grid_unit">32dp</dimen>
+    <dimen name="five_grid_unit">40dp</dimen>
+    <dimen name="six_grid_unit">48dp</dimen>
+    <dimen name="seven_grid_unit">56dp</dimen>
+    <dimen name="eight_grid_unit">64dp</dimen>
+    <dimen name="nine_grid_unit">72dp</dimen>
+    <dimen name="ten_grid_unit">80dp</dimen>
+    <dimen name="eleven_grid_unit">88dp</dimen>
+    <dimen name="twelve_grid_unit">96dp</dimen>
+
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_big">18sp</dimen>
+    <dimen name="text_size_big_24">24sp</dimen>
+    <dimen name="text_size_huge">30sp</dimen>
+
+</resources>
